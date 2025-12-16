@@ -1,0 +1,59 @@
+Task 1: Master Mind
+The purpose of this program is to implement a Mastermind game where a user plays
+against the SwiftBot, using the SwiftBot's camera to read colour inputs.
+The game offers two modes: Default and Customized. At program start, users select their
+preferred mode by pressing either button 'A' for Default mode or button 'B' for Customized
+mode.
+Default mode: At the start of the program, the computer should generate a random code
+of four colours from a range of six different colours [Red (R), Green (G), Blue (B), Yellow
+(Y), Orange (O), Pink(P)]. There should not be any repeating colours in the generated code.
+The player should be able to enter a guess, for example ‘RGBY’, using colour cards. To enter
+the user’s answer, the program should prompt the user to hold the colour cards, one after
+the other, in the desired order. Then the SwiftBot will take a photo of each card and
+determine the colour code. For example, the SwiftBot prompts the user to hold the first
+card in front of the camera and then takes a photo of it. Next it will prompt the user to
+hold the second colour card and takes a photo. This should continue until all the four colour
+cards are scanned.
+The program should process the images one by one to determine the colour sequence. For
+example, your program could convert the image into a pixel matrix and then use the RGB
+values of each pixel to compute the average colour value. This average colour value could
+then be used to determine the colour of the card being scanned.
+After each guess, the program provides feedback using '+' and '-' symbols. The program
+should print ‘+’ if the colour occurs in the code and is in the right position, and ‘-’ if the
+guessed colour is in the code but is in the wrong position.
+Any ‘+’ symbols should be displayed first, and, the SwiftBot does not reveal which colour
+in the guess was right. For example, for code ‘RGBY’ and the player’s guess ‘GPBY’, the
+SwiftBot should display: ++-
+
+A payer has 6 attempts to guess the code correctly. If the player runs out of guesses, the
+SwiftBot should reveal the code and declare the game lost. If the player enters the correct
+code, they win the game, and the SwiftBot should print a congratulatory message. The
+program should display a player-vs-computer score; for example, if the player has won a
+game, the score is 1-0.
+git
+After each game, players can continue the game of quit. If the player wants to quit, they
+need to press button ’X’, and if the player wishes to continue, button ‘Y’ should be pressed.
+If the player continues playing, the score should be updated after each game, accordingly.
+The program should log the details of each round: round number, computer's code,
+player's input, score, total number of guesses and guesses left, to a text file. Before
+terminating, the program should display the log file's location to the user.
+
+Customized mode: At the start of the game, the player should be able to choose the
+number of colours in the code (3 - 6), and the maximum number of guesses allowed.
+This program should be implemented using a command-line user interface (input and
+output printed in the command prompt). Your program should make appropriate error
+checks and exception handling in order to ensure that the input values are within the valid
+range specified in the task description. Invalid input should be rejected, and informative
+error messages should be displayed, prompting the user for new input. The software
+should be designed to enhance user experience and ease of use.
+While the description above outline the required core functionalities, higher grades will be
+awarded for additional features. These additional functionalities must not replace or
+conflict with the required functionalities of the task. They should be substantial, improve
+the usability of your program and clearly demonstrate your software development skills.
+A substantial additional functionality should:
+▪ accept an input from the user,
+▪ perform meaningful processing based on that input and
+▪ produce an output directly related to the SwiftBot’s movement or behaviour.
+You may include as many additional functionalities as you wish, however, implementing
+one substantial additional functionality is sufficient to achieve an A* grade. You may find
+it useful to discuss this with your tutor
